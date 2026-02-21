@@ -1,5 +1,7 @@
 # MineRetroSpill 🕹️
 
+**[Åpne MineRetroSpill på GitHub Pages →](https://frankburmo.github.io/mineretrospill/)**
+
 > Nettsted som lar brukeren enkelt registrere sitt bibliotek over fysiske retrospill.
 
 ![Screenshot](https://github.com/user-attachments/assets/c0545397-6173-4480-8de8-cc9fed9524f1)
