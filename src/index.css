@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap');
+
+:root {
+  --color-bg: #0a0a1a;
+  --color-bg2: #0f0f2e;
+  --color-primary: #ff00ff;
+  --color-secondary: #00ffff;
+  --color-accent: #ffff00;
+  --color-green: #00ff00;
+  --color-red: #ff4444;
+  --color-nes: #e8400c;
+  --color-nes-dark: #8a2500;
+  --color-snes: #6b3fa0;
+  --color-snes-dark: #3d1f6b;
+  --color-text: #e0e0ff;
+  --color-muted: #8888bb;
+  --pixel-font: 'Press Start 2P', monospace;
+  --vt-font: 'VT323', monospace;
+  --border-pixel: 3px solid;
+  --glow-primary: 0 0 8px var(--color-primary), 0 0 16px var(--color-primary);
+  --glow-secondary: 0 0 8px var(--color-secondary), 0 0 16px var(--color-secondary);
+  --glow-accent: 0 0 8px var(--color-accent);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--vt-font);
+  font-size: 1.2rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.15) 2px,
+      rgba(0, 0, 0, 0.15) 4px
+    );
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--pixel-font);
+  border: none;
+}
+
+input {
+  font-family: var(--vt-font);
+}
