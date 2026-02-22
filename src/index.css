@@ -12,6 +12,12 @@
   --color-nes-dark: #8a2500;
   --color-snes: #6b3fa0;
   --color-snes-dark: #3d1f6b;
+  --color-megadrive: #1a75ff;
+  --color-megadrive-dark: #0d3d8a;
+  --color-mastersystem: #cc0000;
+  --color-mastersystem-dark: #7a0000;
+  --color-gameboy: #4a8c3f;
+  --color-gameboy-dark: #2a5424;
   --color-text: #e0e0ff;
   --color-muted: #8888bb;
   --pixel-font: 'Press Start 2P', monospace;

@@ -16,7 +16,7 @@ const Header: React.FC = () => {
           <span className="title-spill">SPILL</span>
         </h1>
         <p className="app-subtitle">
-          Registrer ditt norske retro-spillbibliotek
+          Registrer ditt retro-spillbibliotek
         </p>
         <div className="header-pixel-art" aria-hidden="true">
           <span>▓▓▓</span>

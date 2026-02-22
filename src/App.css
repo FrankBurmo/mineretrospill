@@ -151,6 +151,21 @@
   box-shadow: 0 0 20px rgba(107, 63, 160, 0.4), inset 0 0 20px rgba(107, 63, 160, 0.05);
 }
 
+.platform-megadrive {
+  border-color: var(--color-megadrive);
+  box-shadow: 0 0 20px rgba(26, 117, 255, 0.3), inset 0 0 20px rgba(26, 117, 255, 0.05);
+}
+
+.platform-mastersystem {
+  border-color: var(--color-mastersystem);
+  box-shadow: 0 0 20px rgba(204, 0, 0, 0.3), inset 0 0 20px rgba(204, 0, 0, 0.05);
+}
+
+.platform-gameboy {
+  border-color: var(--color-gameboy);
+  box-shadow: 0 0 20px rgba(74, 140, 63, 0.3), inset 0 0 20px rgba(74, 140, 63, 0.05);
+}
+
 .platform-header {
   display: flex;
   justify-content: space-between;
@@ -168,6 +183,18 @@
 
 .platform-snes .platform-header {
   background: linear-gradient(90deg, var(--color-snes-dark) 0%, #150030 100%);
+}
+
+.platform-megadrive .platform-header {
+  background: linear-gradient(90deg, var(--color-megadrive-dark) 0%, #001a4d 100%);
+}
+
+.platform-mastersystem .platform-header {
+  background: linear-gradient(90deg, var(--color-mastersystem-dark) 0%, #300000 100%);
+}
+
+.platform-gameboy .platform-header {
+  background: linear-gradient(90deg, var(--color-gameboy-dark) 0%, #0a2a06 100%);
 }
 
 .platform-title {
@@ -228,6 +255,27 @@
   background: linear-gradient(90deg, var(--color-snes), #c080ff);
   transition: width 0.5s ease;
   box-shadow: 0 0 8px var(--color-snes);
+}
+
+.platform-megadrive .progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-megadrive), #60a0ff);
+  transition: width 0.5s ease;
+  box-shadow: 0 0 8px var(--color-megadrive);
+}
+
+.platform-mastersystem .progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-mastersystem), #ff4040);
+  transition: width 0.5s ease;
+  box-shadow: 0 0 8px var(--color-mastersystem);
+}
+
+.platform-gameboy .progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-gameboy), #7ac06a);
+  transition: width 0.5s ease;
+  box-shadow: 0 0 8px var(--color-gameboy);
 }
 
 /* ============================================================

@@ -15,11 +15,17 @@ type SortMode = 'title' | 'year';
 const PLATFORM_LABELS: Record<Platform, string> = {
   NES: 'Nintendo 8-bit (NES)',
   SNES: 'Super Nintendo (SNES)',
+  MegaDrive: 'Sega Mega Drive',
+  MasterSystem: 'Sega Master System',
+  GameBoy: 'Nintendo Game Boy',
 };
 
 const PLATFORM_COLORS: Record<Platform, string> = {
   NES: 'nes',
   SNES: 'snes',
+  MegaDrive: 'megadrive',
+  MasterSystem: 'mastersystem',
+  GameBoy: 'gameboy',
 };
 
 const ConsolePlatform: React.FC<ConsolePlatformProps> = ({
@@ -54,7 +60,13 @@ const ConsolePlatform: React.FC<ConsolePlatformProps> = ({
     <section className={`platform-section platform-${PLATFORM_COLORS[platform]}`}>
       <div className="platform-header" onClick={() => setCollapsed((c) => !c)}>
         <h2 className="platform-title">
-          <span className="platform-icon">{platform === 'NES' ? '🎮' : '🕹️'}</span>
+          <span className="platform-icon">
+            {platform === 'NES' && '🎮'}
+            {platform === 'SNES' && '🕹️'}
+            {platform === 'MegaDrive' && '🎮'}
+            {platform === 'MasterSystem' && '🕹️'}
+            {platform === 'GameBoy' && '👾'}
+          </span>
           {PLATFORM_LABELS[platform]}
         </h2>
         <div className="platform-stats">

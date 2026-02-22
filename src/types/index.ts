@@ -1,4 +1,4 @@
-export type Platform = 'NES' | 'SNES';
+export type Platform = 'NES' | 'SNES' | 'MegaDrive' | 'MasterSystem' | 'GameBoy';
 
 export interface Game {
   id: string;
