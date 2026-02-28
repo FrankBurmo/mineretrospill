@@ -47,3 +47,7 @@ npm run preview   # Forhåndsvisning av produksjonsbygg
 ```
 
 GitHub Actions bygger og publiserer automatisk til GitHub Pages ved push til `main`.
+
+## Lisens
+
+Dette prosjektet er lisensiert under [MIT-lisensen](LICENSE).
