@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 10
     groups:
       react:
         patterns:
@@ -14,19 +14,6 @@ updates:
           - "react-dom"
           - "@types/react"
           - "@types/react-dom"
-      vite:
-        patterns:
-          - "vite"
-          - "@vitejs/*"
-      typescript:
-        patterns:
-          - "typescript"
-          - "typescript-eslint"
-      eslint:
-        patterns:
-          - "eslint"
-          - "@eslint/*"
-          - "eslint-plugin-*"
       rest:
         patterns:
           - "*"
