@@ -124,6 +124,7 @@ export const nesGames: Game[] = [
 
 export const snesGames: Game[] = [
   { id: 'SNSP-MW', title: 'Super Mario World', platform: 'SNES', year: 1990, genre: 'Plattform' },
+  { id: 'SNSP-YN', title: 'Bubsy', platform: 'SNES', year: 1993, genre: 'Plattform' },
   { id: 'SNSP-MK', title: 'Super Mario Kart', platform: 'SNES', year: 1992, genre: 'Racing' },
   { id: 'SNSP-4M', title: 'Super Mario All-Stars', platform: 'SNES', year: 1993, genre: 'Plattform' },
   { id: 'SNSP-YI', title: "Super Mario World 2: Yoshi's Island", platform: 'SNES', year: 1995, genre: 'Plattform' },
