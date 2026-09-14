@@ -42,6 +42,11 @@ const ConsolePlatform: React.FC<ConsolePlatformProps> = ({
   const [sort, setSort] = useState<SortMode>('title');
   const [search, setSearch] = useState('');
   const [collapsed, setCollapsed] = useState(false);
+  const [expandedGameId, setExpandedGameId] = useState<string | null>(null);
+
+  const toggleExpandedGame = (gameId: string) => {
+    setExpandedGameId((currentGameId) => (currentGameId === gameId ? null : gameId));
+  };
 
   const ownedCount = games.filter((g) => ownedIds.has(g.id)).length;
   const totalCount = games.length;
@@ -139,6 +144,8 @@ const ConsolePlatform: React.FC<ConsolePlatformProps> = ({
                   game={game}
                   owned={ownedIds.has(game.id)}
                   editions={editionsByGame[game.id] ?? []}
+                  expanded={expandedGameId === game.id}
+                  onToggleExpanded={() => toggleExpandedGame(game.id)}
                   onAddEdition={onAddEdition}
                   onRemoveEdition={onRemoveEdition}
                 />

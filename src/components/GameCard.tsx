@@ -6,6 +6,8 @@ interface GameCardProps {
   game: Game;
   owned: boolean;
   editions: GameEdition[];
+  expanded: boolean;
+  onToggleExpanded: () => void;
   onAddEdition: (gameId: string, editionCode: EditionCode) => void;
   onRemoveEdition: (gameId: string, editionId: string) => void;
 }
@@ -14,10 +16,11 @@ const GameCard: React.FC<GameCardProps> = ({
   game,
   owned,
   editions,
+  expanded,
+  onToggleExpanded,
   onAddEdition,
   onRemoveEdition,
 }) => {
-  const [expanded, setExpanded] = useState(false);
   const [editionCode, setEditionCode] = useState<EditionCode>('SCN');
   const panelId = `editions-${game.id}`;
 
@@ -25,7 +28,7 @@ const GameCard: React.FC<GameCardProps> = ({
     <article className={`game-card ${owned ? 'owned' : ''}`}>
       <button
         className="game-card-summary"
-        onClick={() => setExpanded((current) => !current)}
+        onClick={onToggleExpanded}
         aria-expanded={expanded}
         aria-controls={panelId}
         title={`${game.title}${game.year ? ` (${game.year})` : ''}`}
