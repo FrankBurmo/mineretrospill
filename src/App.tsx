@@ -7,46 +7,56 @@ import { useLibrary } from './hooks/useLibrary';
 import './App.css';
 
 const App: React.FC = () => {
-  const { library, toggleGame, ownedCount } = useLibrary();
+  const { library, addEdition, removeEdition, ownedGameCount, ownedEditionCount } = useLibrary();
 
   const ownedSet = useMemo(() => {
-    return new Set(Object.keys(library).filter((k) => library[k]));
+    return new Set(Object.keys(library.games));
   }, [library]);
 
   return (
     <div className="app">
       <Header />
-      <StatsBar ownedCount={ownedCount} />
+      <StatsBar ownedGameCount={ownedGameCount} ownedEditionCount={ownedEditionCount} />
       <main className="app-main">
         <ConsolePlatform
           platform="SNES"
           games={snesGames}
           ownedIds={ownedSet}
-          onToggle={toggleGame}
+          editionsByGame={library.games}
+          onAddEdition={addEdition}
+          onRemoveEdition={removeEdition}
         />
         <ConsolePlatform
           platform="NES"
           games={nesGames}
           ownedIds={ownedSet}
-          onToggle={toggleGame}
+          editionsByGame={library.games}
+          onAddEdition={addEdition}
+          onRemoveEdition={removeEdition}
         />
         <ConsolePlatform
           platform="MegaDrive"
           games={megaDriveGames}
           ownedIds={ownedSet}
-          onToggle={toggleGame}
+          editionsByGame={library.games}
+          onAddEdition={addEdition}
+          onRemoveEdition={removeEdition}
         />
         <ConsolePlatform
           platform="MasterSystem"
           games={masterSystemGames}
           ownedIds={ownedSet}
-          onToggle={toggleGame}
+          editionsByGame={library.games}
+          onAddEdition={addEdition}
+          onRemoveEdition={removeEdition}
         />
         <ConsolePlatform
           platform="GameBoy"
           games={gameBoyGames}
           ownedIds={ownedSet}
-          onToggle={toggleGame}
+          editionsByGame={library.games}
+          onAddEdition={addEdition}
+          onRemoveEdition={removeEdition}
         />
       </main>
       <footer className="app-footer">

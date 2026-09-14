@@ -1,12 +1,14 @@
 import React, { useState, useMemo } from 'react';
-import type { Game, Platform } from '../types';
+import type { EditionCode, Game, GameEdition, Platform } from '../types';
 import GameCard from './GameCard';
 
 interface ConsolePlatformProps {
   platform: Platform;
   games: Game[];
   ownedIds: Set<string>;
-  onToggle: (gameId: string) => void;
+  editionsByGame: Record<string, GameEdition[]>;
+  onAddEdition: (gameId: string, editionCode: EditionCode) => void;
+  onRemoveEdition: (gameId: string, editionId: string) => void;
 }
 
 type FilterMode = 'all' | 'owned' | 'missing';
@@ -32,7 +34,9 @@ const ConsolePlatform: React.FC<ConsolePlatformProps> = ({
   platform,
   games,
   ownedIds,
-  onToggle,
+  editionsByGame,
+  onAddEdition,
+  onRemoveEdition,
 }) => {
   const [filter, setFilter] = useState<FilterMode>('all');
   const [sort, setSort] = useState<SortMode>('title');
@@ -134,7 +138,9 @@ const ConsolePlatform: React.FC<ConsolePlatformProps> = ({
                   key={game.id}
                   game={game}
                   owned={ownedIds.has(game.id)}
-                  onToggle={onToggle}
+                  editions={editionsByGame[game.id] ?? []}
+                  onAddEdition={onAddEdition}
+                  onRemoveEdition={onRemoveEdition}
                 />
               ))
             )}

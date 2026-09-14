@@ -2,18 +2,24 @@ import React from 'react';
 import { allGames } from '../data/games';
 
 interface StatsBarProps {
-  ownedCount: number;
+  ownedGameCount: number;
+  ownedEditionCount: number;
 }
 
-const StatsBar: React.FC<StatsBarProps> = ({ ownedCount }) => {
+const StatsBar: React.FC<StatsBarProps> = ({ ownedGameCount, ownedEditionCount }) => {
   const totalCount = allGames.length;
-  const percent = totalCount > 0 ? Math.round((ownedCount / totalCount) * 100) : 0;
+  const percent = totalCount > 0 ? Math.round((ownedGameCount / totalCount) * 100) : 0;
 
   return (
     <div className="stats-bar">
       <div className="stats-item">
         <span className="stats-label">TOTALT SAMLET</span>
-        <span className="stats-value">{ownedCount}</span>
+        <span className="stats-value">{ownedGameCount}</span>
+      </div>
+      <div className="stats-divider">|</div>
+      <div className="stats-item">
+        <span className="stats-label">EKSEMPLARER</span>
+        <span className="stats-value">{ownedEditionCount}</span>
       </div>
       <div className="stats-divider">|</div>
       <div className="stats-item">
