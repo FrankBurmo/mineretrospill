@@ -12,6 +12,7 @@ export const snesGames: Game[] = [
   { id: 'SNSP-UL', title: 'Battletoads & Double Dragon', platform: 'SNES', year: 1993, genre: 'Beat em up' },
   { id: 'SNSP-NX', title: 'Battletoads in Battlemaniacs', platform: 'SNES', year: 1993, genre: 'Beat em up' },
   { id: 'SNSP-ABMP', title: 'Biker Mice from Mars', platform: 'SNES', year: 1994, genre: 'Racing' },
+  { id: 'SNSP-WG', title: 'Blazing Skies', platform: 'SNES', year: 1994, genre: 'Skytespill' },
   { id: 'SNSP-5Y', title: 'Brett Hull Hockey', platform: 'SNES', year: 1993, genre: 'Sport' },
   { id: 'SNSP-YN', title: 'Bubsy', platform: 'SNES', year: 1993, genre: 'Plattform' },
   { id: 'SNSP-6A', title: 'Captain America and the Avengers', platform: 'SNES', year: 1992, genre: 'Beat em up' },
